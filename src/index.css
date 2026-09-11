@@ -1,0 +1,149 @@
+.header { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 10px 30px; 
+  margin: 15px; 
+  background-color: white; 
+  border-radius: 12px; 
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25); 
+} 
+ 
+ 
+/* LOGO */ 
+ 
+.logo { 
+  width: 105px; 
+  cursor: pointer; 
+} 
+ 
+ 
+/* NAVIGATION */ 
+ 
+.Nav-items ul { 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  font-family: "Poppins", sans-serif; 
+  font-size: 20px; 
+  font-weight: 500; 
+} 
+ 
+.Nav-items ul li { 
+  padding: 10px 15px; 
+  font-size: 18px; 
+  font-weight: 500; 
+  cursor: pointer; 
+  border-radius: 8px; 
+  transition: 0.1s; 
+} 
+ 
+.Nav-items ul li:hover { 
+  background-color: #f0f2f2; 
+  transform: translateY(-1px); 
+} 
+ 
+ 
+/* RESTAURANT CONTAINER */ 
+ 
+.res-container { 
+  display: grid; 
+  grid-template-columns: repeat(5, 250px); 
+  gap: 25px; 
+  padding: 20px 10px; 
+} 
+ 
+ 
+/* RESTAURANT CARD */ 
+ 
+.Res-card{
+  width: 250px; 
+  border-radius: 12px; 
+  overflow: hidden; 
+  background-color: #f0f2f2; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+  cursor: pointer; 
+  transition: transform 0.1s ease, box-shadow 0.1s ease; 
+  padding-bottom: 10px; 
+} 
+ 
+.Res-card:hover { 
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+} 
+ 
+ 
+/* RESTAURANT IMAGE */ 
+ 
+.Res-card img { 
+  width: 100%; 
+  height: 180px; 
+  object-fit: cover; 
+  border-radius: 12px; 
+} 
+ 
+ 
+/* RESTAURANT TEXT */ 
+ 
+.Res-card h3 { 
+  margin: 10px 12px 6px; 
+  font-size: 18px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+} 
+ 
+.Res-card h4 { 
+  margin: 6px 12px; 
+  font-size: 14px; 
+  font-weight: 500; 
+  color: #555; 
+} 
+ 
+ 
+/* SEARCH */ 
+ 
+.Search { 
+  padding: 10px; 
+} 
+ 
+ 
+/* FILTER BUTTON */ 
+ 
+.filter-btn { 
+  margin: 10px; 
+  padding-left: 10px; 
+} 
+ 
+ 
+/* ================= WHAT'S ON YOUR MIND ================= */ 
+ 
+.food-section { 
+  margin: 25px 0; 
+  padding-left: 10px; 
+} 
+ 
+.food-categories { 
+  display: flex; 
+  gap: 30px; 
+} 
+ 
+.food-item { 
+  text-align: center; 
+  cursor: pointer; 
+} 
+ 
+.food-item img { 
+  width: 120px; 
+  height: 120px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+} 
+ 
+.food-item p { 
+  font-size: 18px; 
+  padding-left: 10px; 
+}
