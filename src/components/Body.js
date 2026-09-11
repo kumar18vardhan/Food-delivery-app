@@ -11,9 +11,8 @@ const Body = () => {
 
   const fetchdata= async () => {
   const data = await fetch(
-  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=24.7752901&lng=84.9622929&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+  "https://foodfire.onrender.com/api/restaurants?lat=24.7752901&lng=84.9622929&page_type=DESKTOP_WEB_LISTING"
   );
-
   const json = await data.json();
   console.log(json);
   const restaurantCard = json.data.cards.find(
