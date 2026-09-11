@@ -1,149 +1,372 @@
-.header { 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  padding: 10px 30px; 
-  margin: 15px; 
-  background-color: white; 
-  border-radius: 12px; 
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25); 
-} 
- 
- 
-/* LOGO */ 
- 
-.logo { 
-  width: 105px; 
-  cursor: pointer; 
-} 
- 
- 
-/* NAVIGATION */ 
- 
-.Nav-items ul { 
-  display: flex; 
-  align-items: center; 
-  gap: 10px; 
-  list-style: none; 
-  margin: 0; 
-  padding: 0; 
-  font-family: "Poppins", sans-serif; 
-  font-size: 20px; 
-  font-weight: 500; 
-} 
- 
-.Nav-items ul li { 
-  padding: 10px 15px; 
-  font-size: 18px; 
-  font-weight: 500; 
-  cursor: pointer; 
-  border-radius: 8px; 
-  transition: 0.1s; 
-} 
- 
-.Nav-items ul li:hover { 
-  background-color: #f0f2f2; 
-  transform: translateY(-1px); 
-} 
- 
- 
-/* RESTAURANT CONTAINER */ 
- 
-.res-container { 
-  display: grid; 
-  grid-template-columns: repeat(5, 250px); 
-  gap: 25px; 
-  padding: 20px 10px; 
-} 
- 
- 
-/* RESTAURANT CARD */ 
- 
-.Res-card{
-  width: 250px; 
-  border-radius: 12px; 
-  overflow: hidden; 
-  background-color: #f0f2f2; 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
-  cursor: pointer; 
-  transition: transform 0.1s ease, box-shadow 0.1s ease; 
-  padding-bottom: 10px; 
-} 
- 
-.Res-card:hover { 
-  transform: translateY(-5px); 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
-} 
- 
- 
-/* RESTAURANT IMAGE */ 
- 
-.Res-card img { 
-  width: 100%; 
-  height: 180px; 
-  object-fit: cover; 
-  border-radius: 12px; 
-} 
- 
- 
-/* RESTAURANT TEXT */ 
- 
-.Res-card h3 { 
-  margin: 10px 12px 6px; 
-  font-size: 18px; 
-  white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
-} 
- 
-.Res-card h4 { 
-  margin: 6px 12px; 
-  font-size: 14px; 
-  font-weight: 500; 
-  color: #555; 
-} 
- 
- 
-/* SEARCH */ 
- 
-.Search { 
-  padding: 10px; 
-} 
- 
- 
-/* FILTER BUTTON */ 
- 
-.filter-btn { 
-  margin: 10px; 
-  padding-left: 10px; 
-} 
- 
- 
-/* ================= WHAT'S ON YOUR MIND ================= */ 
- 
-.food-section { 
-  margin: 25px 0; 
-  padding-left: 10px; 
-} 
- 
-.food-categories { 
-  display: flex; 
-  gap: 30px; 
-} 
- 
-.food-item { 
-  text-align: center; 
-  cursor: pointer; 
-} 
- 
-.food-item img { 
-  width: 120px; 
-  height: 120px; 
-  border-radius: 50%; 
-  object-fit: cover; 
-} 
- 
-.food-item p { 
-  font-size: 18px; 
-  padding-left: 10px; 
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  margin: 15px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 105px;
+  cursor: pointer;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.Nav-items ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.Nav-items ul li {
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.Nav-items ul li:hover {
+  background-color: #f0f2f2;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   WHAT'S ON YOUR MIND
+========================= */
+
+.food-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 25px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.food-section h2 {
+  margin-bottom: 20px;
+}
+
+.food-categories {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.food-item {
+  text-align: center;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.food-item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.food-item p {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.Search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.Search input {
+  width: 320px;
+  max-width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.Search input:focus {
+  border-color: #ff5200;
+  box-shadow: 0 0 5px rgba(255, 82, 0, 0.25);
+}
+
+.Search button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff5200;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.Search button:hover {
+  background-color: #e04800;
+}
+
+/* =========================
+   FILTER
+========================= */
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 25px;
+}
+
+.filter-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: #555;
+}
+
+/* =========================
+   RESTAURANT CONTAINER
+========================= */
+
+.res-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+
+  display: grid;
+
+  /* Automatically adjusts number of cards */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 25px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   RESTAURANT CARD
+========================= */
+
+.Res-card {
+  width: 100%;
+  min-width: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f0f2f2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.Res-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   RESTAURANT IMAGE
+========================= */
+
+.Res-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   RESTAURANT TEXT
+========================= */
+
+.Res-card h2,
+.Res-card h3,
+.Res-card h4 {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.Res-card h3 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: 18px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Res-card h4 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .header {
+    padding: 10px 20px;
+  }
+
+  .Nav-items ul li {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+
+  .res-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media (max-width: 750px) {
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .Nav-items ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .food-section {
+    padding: 0 15px;
+  }
+
+  .food-categories {
+    justify-content: center;
+  }
+
+  .Search {
+    padding: 0 15px;
+  }
+
+  .res-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 15px;
+    gap: 18px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .header {
+    margin: 10px;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .Nav-items ul {
+    gap: 5px;
+  }
+
+  .Nav-items ul li {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .food-section {
+    margin-top: 20px;
+  }
+
+  .food-categories {
+    gap: 20px;
+  }
+
+  .food-item img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .food-item p {
+    font-size: 14px;
+  }
+
+  .Search {
+    flex-direction: column;
+    gap: 10px;
+    margin: 25px auto;
+  }
+
+  .Search input {
+    width: 100%;
+  }
+
+  .Search button {
+    width: 100%;
+  }
+
+  .filter {
+    padding: 0 15px;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+  .res-container {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .Res-card img {
+    height: 200px;
+  }
 }
