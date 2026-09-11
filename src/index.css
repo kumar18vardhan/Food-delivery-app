@@ -14,6 +14,8 @@
   box-sizing: border-box;
 }
 
+/* LOGO */
+
 .logo {
   width: 105px;
   cursor: pointer;
@@ -137,7 +139,7 @@
 }
 
 /* =========================
-   FILTER
+   FILTER BUTTON
 ========================= */
 
 .filter {
@@ -171,11 +173,9 @@
   padding: 20px;
 
   display: grid;
-
-  /* Automatically adjusts number of cards */
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-
   gap: 25px;
+
   box-sizing: border-box;
 }
 
@@ -201,9 +201,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* =========================
-   RESTAURANT IMAGE
-========================= */
+/* RESTAURANT IMAGE */
 
 .Res-card img {
   width: 100%;
@@ -212,9 +210,7 @@
   display: block;
 }
 
-/* =========================
-   RESTAURANT TEXT
-========================= */
+/* RESTAURANT TEXT */
 
 .Res-card h2,
 .Res-card h3,
@@ -304,8 +300,13 @@
 
 @media (max-width: 500px) {
 
+  /* HEADER */
+
   .header {
     margin: 10px;
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .logo {
@@ -313,57 +314,85 @@
   }
 
   .Nav-items ul {
-    gap: 5px;
+    gap: 2px;
+    flex-wrap: nowrap;
   }
 
   .Nav-items ul li {
     font-size: 14px;
-    padding: 8px;
+    padding: 7px 8px;
   }
 
+  /* WHAT'S ON YOUR MIND */
+
   .food-section {
-    margin-top: 20px;
+    margin: 20px 0;
+    padding: 0 15px;
+  }
+
+  .food-section h2 {
+    font-size: 28px;
   }
 
   .food-categories {
-    gap: 20px;
+    justify-content: space-between;
+    gap: 10px;
   }
 
   .food-item img {
-    width: 90px;
-    height: 90px;
+    width: 85px;
+    height: 85px;
   }
 
   .food-item p {
     font-size: 14px;
+    padding-left: 0;
   }
 
+  /* SEARCH */
+
   .Search {
-    flex-direction: column;
-    gap: 10px;
-    margin: 25px auto;
+    width: auto;
+    margin: 25px 15px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 
   .Search input {
     width: 100%;
+    font-size: 16px;
   }
 
   .Search button {
-    width: 100%;
+    flex: 1;
+    width: auto;
+    padding: 12px 10px;
+    font-size: 16px;
   }
 
+  /* FILTER */
+
   .filter {
-    padding: 0 15px;
+    margin: 20px 15px 25px;
   }
 
   .filter-btn {
     width: 100%;
+    font-size: 15px;
   }
+
+  /* RESTAURANT CARDS */
 
   .res-container {
     grid-template-columns: 1fr;
     padding: 15px;
     gap: 20px;
+  }
+
+  .Res-card {
+    width: 100%;
   }
 
   .Res-card img {
