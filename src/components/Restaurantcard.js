@@ -23,15 +23,15 @@ const Restaurantcard = ({ resData }) => {
 
       <h3>{name}</h3>
 
-      <h4>{cuisines?.join(", ")}</h4>
+      <p className="cuisine">{cuisines?.join(", ")}</p>
 
-      <h4>⭐ {avgRating}</h4>
+          <div className="rating-time">
+          <h4>⭐ {avgRating}</h4>
+          <h4>⏱️ {sla?.deliveryTime} mins</h4>
+          </div>
 
-      <h4>{costForTwoString}</h4>
-
-      <h4>{sla?.deliveryTime} minutes</h4>
-
-      <h4>{areaName}</h4>
+         <p className="price">{costForTwoString}</p>
+         <p className="area">📍 {areaName}</p>
     </div>
   );
 };

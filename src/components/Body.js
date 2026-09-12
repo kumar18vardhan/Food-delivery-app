@@ -31,6 +31,7 @@ const Body = () => {
     setFilteredRestaurants(restaurants);
   };
 
+  // Search restaurants
   const handleSearch = () => {
     const filteredList = allRestaurants.filter((restaurant) =>
       restaurant?.info?.name
@@ -41,6 +42,7 @@ const Body = () => {
     setFilteredRestaurants(filteredList);
   };
 
+  // Top rated restaurants
   const handleTopRated = () => {
     const filteredList = allRestaurants.filter(
       (restaurant) => restaurant?.info?.avgRating > 4
@@ -49,37 +51,65 @@ const Body = () => {
     setFilteredRestaurants(filteredList);
   };
 
+  // Clear search and filters
   const handleClearSearch = () => {
     setSearchText("");
     setFilteredRestaurants(allRestaurants);
   };
 
+  // Food category filter
+  const handleCategoryFilter = (category) => {
+    const filteredList = allRestaurants.filter((restaurant) =>
+      restaurant?.info?.cuisines?.some((cuisine) =>
+        cuisine.toLowerCase().includes(category.toLowerCase())
+      )
+    );
+
+    setFilteredRestaurants(filteredList);
+  };
+
   return (
     <div className="Body">
+
+      {/* Food Categories */}
       <div className="food-section">
         <h2>What's on your mind?</h2>
 
         <div className="food-categories">
-          <div className="food-item">
+
+          {/* Pizza */}
+          <div
+            className="food-item"
+            onClick={() => handleCategoryFilter("pizza")}
+          >
             <img
               src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Pizzas.png"
               alt="Pizza"
             />
           </div>
 
-          <div className="food-item">
+          {/* Biryani */}
+          <div
+            className="food-item"
+            onClick={() => handleCategoryFilter("biryani")}
+          >
             <img
               src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Biryani.png"
               alt="Biryani"
             />
           </div>
 
-          <div className="food-item">
+          {/* Cakes */}
+          <div
+            className="food-item"
+            onClick={() => handleCategoryFilter("cake")}
+          >
             <img
               src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_cake.png"
               alt="Cakes"
             />
           </div>
+
         </div>
       </div>
 
@@ -92,17 +122,31 @@ const Body = () => {
           onChange={(e) => setSearchText(e.target.value)}
         />
 
-        <button onClick={handleSearch}>Search</button>
+        <button onClick={handleSearch}>
+          Search
+        </button>
 
-        <button onClick={handleClearSearch}>Clear</button>
+        <button onClick={handleClearSearch}>
+          Clear
+        </button>
       </div>
 
       {/* Filter Section */}
       <div className="filter">
-        <button className="filter-btn" onClick={handleTopRated}>
+        <button
+          className="filter-btn"
+          onClick={handleTopRated}
+        >
           TOP RATED RESTAURANT
         </button>
       </div>
+
+      {/* No Results */}
+      {filteredRestaurants.length === 0 && (
+        <h3 className="no-results">
+          No restaurants found 😕
+        </h3>
+      )}
 
       {/* Restaurant Cards */}
       <div className="res-container">
@@ -115,6 +159,7 @@ const Body = () => {
             />
           ))}
       </div>
+
     </div>
   );
 };
