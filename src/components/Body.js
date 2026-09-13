@@ -109,6 +109,62 @@ const Body = () => {
               alt="Cakes"
             />
           </div>
+          {/* Noodles */}
+     <div
+     className="food-item"
+     onClick={() => {
+     const filteredList = allRestaurants.filter((restaurant) =>
+     restaurant?.info?.cuisines?.some((cuisine) =>
+     cuisine.toLowerCase().includes("chinese")
+      )
+    );
+
+    setFilteredRestaurants(filteredList);
+  }}
+>
+  <img
+    src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Noodles.png"
+    alt="Chinese"
+  />
+</div>
+
+
+{/* North Indian */}
+<div
+  className="food-item"
+  onClick={() => {
+    const filteredList = allRestaurants.filter((restaurant) =>
+      restaurant?.info?.cuisines?.some((cuisine) =>
+        cuisine.toLowerCase().includes("north indian")
+      )
+    );
+
+    setFilteredRestaurants(filteredList);
+     }  }
+    >
+   <img
+    src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/1/24/05a939eb-fd4e-4308-b989-d1c54f4421b3_northindian1.png"
+    alt="North Indian"
+       />
+    </div>
+
+
+      {/* Pure Veg */}
+       <div
+      className="food-item"
+      onClick={() => {
+       const filteredList = allRestaurants.filter((restaurant) =>
+      restaurant?.info?.veg === true
+       );
+
+       setFilteredRestaurants(filteredList);
+         }}
+>
+       <img
+       src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Pure%20Veg.png"
+       alt="Pure Veg"
+       />
+       </div>
 
         </div>
       </div>

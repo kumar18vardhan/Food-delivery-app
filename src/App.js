@@ -8,11 +8,13 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Error from "./components/Error";
 import Footer from "./components/Footer";
 import "./index.css";
+import { useState } from "react";
 
 const AppLayout = () => {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <div className="app">
-      <Header />
+    <div className={darkMode ? "app dark-mode" : "app"}>
+      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <Outlet />
       <Footer />
     </div>

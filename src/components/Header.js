@@ -1,7 +1,7 @@
 import { LOGO_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
 
- const Header = () => {
+ const Header = ({ darkMode, setDarkMode }) => {
     return (
         <div className="header">
             <div className="logo-container">
@@ -15,14 +15,22 @@ import { Link } from "react-router-dom";
             <div className="Nav-items">
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
-                         </li>
+                    <Link to="/">Home</Link>
+                    </li>
                     <li>
                     <Link to="/about">About Us</Link>
                     </li>
                     <li>
                     <Link to="/contact">Contact Us</Link>
                     </li>
+                    <li>
+                    <button
+                    className="dark-mode-btn"
+                    onClick={() => setDarkMode(!darkMode)}
+  >
+                   {darkMode ? "☀️" : "🌙"}
+                    </button>
+                   </li>
                 </ul>
             </div>
         </div>

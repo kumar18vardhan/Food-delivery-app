@@ -1,6 +1,6 @@
-/* 
+/* =========================
    HEADER
- */
+========================= */
 
 .header {
   display: flex;
@@ -14,6 +14,7 @@
   box-sizing: border-box;
 }
 
+
 /* LOGO */
 
 .logo {
@@ -21,9 +22,10 @@
   cursor: pointer;
 }
 
-/*
+
+/* =========================
    NAVIGATION
-*/
+========================= */
 
 .Nav-items ul {
   display: flex;
@@ -50,6 +52,17 @@
   transform: translateY(-1px);
 }
 
+.Nav-items a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.Nav-items a:hover {
+  color: #ff6600;
+}
+
+
 /* =========================
    WHAT'S ON YOUR MIND
 ========================= */
@@ -68,29 +81,34 @@
 
 .food-categories {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 35px;
   flex-wrap: wrap;
 }
 
 .food-item {
+  width: 150px;
   text-align: center;
   cursor: pointer;
-  flex: 0 0 auto;
+  transition: transform 0.2s ease;
 }
 
 .food-item img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+.food-item:hover {
+  transform: scale(1.05);
 }
 
 .food-item p {
   font-size: 18px;
   margin-top: 8px;
 }
+
 
 /* =========================
    SEARCH
@@ -138,6 +156,7 @@
   background-color: #e04800;
 }
 
+
 /* =========================
    FILTER BUTTON
 ========================= */
@@ -162,6 +181,7 @@
   background-color: #555;
 }
 
+
 /* =========================
    RESTAURANT CONTAINER
 ========================= */
@@ -178,6 +198,7 @@
 
   box-sizing: border-box;
 }
+
 
 /* =========================
    RESTAURANT CARD
@@ -200,6 +221,7 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
+
 /* RESTAURANT IMAGE */
 
 .Res-card img {
@@ -213,6 +235,7 @@
 .Res-card:hover img {
   transform: scale(1.04);
 }
+
 
 /* RESTAURANT TEXT */
 
@@ -242,12 +265,44 @@
   color: #555;
   line-height: 20px;
 }
+
 .Res-card .cuisine {
   margin: 0 12px;
   height: 40px;
   line-height: 20px;
   overflow: hidden;
 }
+
+.rating-time {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 12px;
+}
+
+.rating-time h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Res-card .area {
+  margin: 6px 12px 14px;
+  font-size: 14px;
+  color: #666;
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.Res-card .price {
+  margin: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+
 /* =========================
    TABLET
 ========================= */
@@ -268,6 +323,7 @@
     gap: 20px;
   }
 }
+
 
 /* =========================
    SMALL TABLET
@@ -305,6 +361,7 @@
   }
 }
 
+
 /* =========================
    MOBILE
 ========================= */
@@ -334,6 +391,7 @@
     padding: 7px 8px;
   }
 
+
   /* WHAT'S ON YOUR MIND */
 
   .food-section {
@@ -350,6 +408,10 @@
     gap: 10px;
   }
 
+  .food-item {
+    width: auto;
+  }
+
   .food-item img {
     width: 85px;
     height: 85px;
@@ -359,6 +421,7 @@
     font-size: 14px;
     padding-left: 0;
   }
+
 
   /* SEARCH */
 
@@ -383,6 +446,7 @@
     font-size: 16px;
   }
 
+
   /* FILTER */
 
   .filter {
@@ -393,6 +457,7 @@
     width: 100%;
     font-size: 15px;
   }
+
 
   /* RESTAURANT CARDS */
 
@@ -410,36 +475,11 @@
     height: 200px;
   }
 }
-.rating-time {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 8px 12px;
-}
 
-.rating-time h4 {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 500;
-}
 
-.Res-card .area {
-  margin: 6px 12px 14px;
-  font-size: 14px;
-  color: #666;
-  line-height: 20px;
-  height: 40px;
-  overflow: hidden;
-}
-
-.Res-card .price {
-  margin: 8px 12px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #333;
-}
-
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
   background: #fff3e8;
@@ -459,6 +499,7 @@
   gap: 50px;
 }
 
+
 /* Brand */
 
 .footer-brand h2 {
@@ -474,6 +515,7 @@
   margin: 6px 0;
   max-width: 300px;
 }
+
 
 /* Quick Links */
 
@@ -502,6 +544,7 @@
   transform: translateX(4px);
 }
 
+
 /* Information */
 
 .footer-info p {
@@ -509,6 +552,7 @@
   line-height: 1.6;
   margin: 6px 0;
 }
+
 
 /* Bottom Section */
 
@@ -530,9 +574,13 @@
   margin: 0;
 }
 
-/* ================= MOBILE ================= */
+
+/* =========================
+   FOOTER MOBILE
+========================= */
 
 @media (max-width: 768px) {
+
   .footer {
     margin-top: 40px;
     padding-top: 35px;
@@ -556,9 +604,11 @@
   }
 }
 
+
 /* Small Mobile */
 
 @media (max-width: 400px) {
+
   .footer-container {
     padding-left: 15px;
     padding-right: 15px;
@@ -569,28 +619,295 @@
     padding-right: 15px;
   }
 }
-.Nav-items a {
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-}
 
-.Nav-items a:hover {
-  color: #ff6600;
-}
 
-.food-item {
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.food-item:hover {
-  transform: scale(1.05);
-}
+/* =========================
+   NO RESULTS
+========================= */
 
 .no-results {
   text-align: center;
   margin: 50px 20px;
   color: #666;
   font-size: 20px;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+
+/* Header */
+
+.dark-mode .header {
+  background-color: #1e1e1e;
+}
+
+
+/* Header Links */
+
+.dark-mode .Nav-items a {
+  color: #ffffff;
+}
+
+.dark-mode .Nav-items a:hover {
+  color: #ff6600;
+}
+
+
+/* Header Hover */
+
+.dark-mode .Nav-items ul li:hover {
+  background-color: #292929;
+}
+
+
+/* Headings */
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: #ffffff;
+}
+
+
+/* Search */
+
+.dark-mode .Search input {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+.dark-mode .Search input::placeholder {
+  color: #aaa;
+}
+
+
+/* Restaurant Cards */
+
+.dark-mode .Res-card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .Res-card h2 {
+  color: #ffffff;
+}
+
+.dark-mode .Res-card .cuisine,
+.dark-mode .Res-card .area {
+  color: #bbb;
+}
+
+.dark-mode .Res-card .price {
+  color: #ddd;
+}
+
+.dark-mode .Res-card h4 {
+  color: #ddd;
+}
+
+
+/* Filter */
+
+.dark-mode .filter-btn {
+  background-color: #333;
+}
+
+.dark-mode .filter-btn:hover {
+  background-color: #444;
+}
+
+
+/* Footer */
+
+.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-top: 1px solid #333;
+}
+
+.dark-mode .footer-brand h2 {
+  color: #ff6600;
+}
+
+.dark-mode .footer-brand p,
+.dark-mode .footer-info p,
+.dark-mode .footer-links a {
+  color: #bbb;
+}
+
+.dark-mode .footer-links a:hover {
+  color: #ff6600;
+}
+
+.dark-mode .footer-links h3,
+.dark-mode .footer-info h3 {
+  color: #ffffff;
+}
+
+.dark-mode .footer-bottom {
+  border-top: 1px solid #333;
+  color: #999;
+}
+
+
+/* Dark Mode Button */
+
+.dark-mode-btn {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease;
+}
+
+.dark-mode-btn:hover {
+  transform: scale(1.15);
+}
+
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 45px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-page h1 {
+  text-align: center;
+  color: #ff6600;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.about-page h2 {
+  color: #ff6600;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+.about-page p {
+  color: #555;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-page {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 45px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-page h1 {
+  text-align: center;
+  color: #ff6600;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.contact-page h2 {
+  color: #ff6600;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.contact-page > p {
+  color: #555;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.contact-info {
+  margin: 30px 0;
+  padding: 25px;
+  background: #fff3e8;
+  border-radius: 12px;
+}
+
+.contact-info h2 {
+  margin-top: 0;
+}
+
+.contact-info p {
+  color: #444;
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+
+/* About & Contact Dark Mode */
+
+.dark-mode .about-page,
+.dark-mode .contact-page {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.dark-mode .about-page h1,
+.dark-mode .about-page h2,
+.dark-mode .contact-page h1,
+.dark-mode .contact-page h2 {
+  color: #ff6600;
+}
+
+.dark-mode .about-page p,
+.dark-mode .contact-page > p {
+  color: #ccc;
+}
+
+.dark-mode .contact-info {
+  background: #292929;
+}
+
+.dark-mode .contact-info p {
+  color: #ddd;
+}
+
+
+/* =========================
+   ABOUT & CONTACT MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .about-page,
+  .contact-page {
+    margin: 35px 20px;
+    padding: 30px 25px;
+  }
+
+  .about-page h1,
+  .contact-page h1 {
+    font-size: 30px;
+  }
+
+  .about-page p,
+  .contact-page > p {
+    font-size: 16px;
+  }
 }
